@@ -1,7 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-import starlight from '@astrojs/starlight';
 import cloudflare from '@astrojs/cloudflare';
+import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
@@ -11,6 +11,9 @@ export default defineConfig({
 		starlight({
 			title: 'My Docs',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			components: {
+				Pagination: './src/components/CustomPagination.astro',
+			},
 			sidebar: [
 				{
 					label: 'Guides',
